@@ -26,21 +26,21 @@ Here are simple examples on how to file/directory creation-deletion, red/write. 
 		
 
 				//
-				//CREATE A DIRECTORY RECURSEVLY
+				//CREATE A DIRECTORY RECURSIVELY
 				var a = new DirManager(); // Initialize a Folder manager
-		        a.create_r('folder_a/folder_b',Log('complete/jorge'));
+		        a.create_r('folder_a/folder_b',Log('created successfully'));
 
 				//LIST A DIRECTORY 
 				a.list('cosa', Log('List'));
 
-		        //REMOVE A DIRECTORY RECURSEVLY
+		        //REMOVE A DIRECTORY RECURSIVELY
 		        a.remove('folder_a/folder_b',Log('complete delte'), Log('delete fail'));
 
 				//
 				//FILES MANAGEMENT:
 				//
 		        var b = new FileManager();
-		        // create an empty  FILE (simialr unix touch command), directory will be created recursevly if it doesnt exist
+		        // create an empty  FILE (simialr unix touch command), directory will be created RECURSIVELY if it doesnt exist
 		        b.load_file('dira/dirb/dirc','demofile.txt',Log('file created'),Log('something went wrong'));
 		        
 		        // WRITE TO A FILE
