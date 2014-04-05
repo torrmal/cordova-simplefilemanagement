@@ -4,10 +4,10 @@ cordova-simplefilemanagement
 This makes file/directory creation-deletion, red/write. download very simple.
 you will need the cordova file plugins:
 
-'''
+```
 $ phonegap local plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file.git
 $ phonegap local plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-file-transfer.git
-'''
+```
 
 Here are simple examples on how to file/directory creation-deletion, red/write. download:
 
