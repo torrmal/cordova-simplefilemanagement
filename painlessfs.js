@@ -352,9 +352,11 @@ var FileManager = function(){
 		);
 	};
 
-	this.download_file = function(url, todir, tofilename, success, fail){
+	this.download_file = function(url, todir, tofilename, success, fail, options, trustAllHosts){
 
 		fail = (typeof fail == 'undefined')? Log('FileManager','read file fail'): fail;
+		options = (typeof options == 'undefined') ? {} : options;
+		trustAllHosts = (typeof trustAllHosts == 'undefined') ? false : (trustAllHosts === true);
 		this.load_file(
 			todir,
 			tofilename,
@@ -377,7 +379,9 @@ var FileManager = function(){
 		                    console.log("download error target " + error.target);
 		                    console.log("upload error code: " + error.code);
 		                    fail(error);
-		                }
+		                },
+                                trustAllHosts,
+                                options
 		            );
 
 
