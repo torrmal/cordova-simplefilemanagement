@@ -47,6 +47,16 @@ var DirManager = function(){
 
 	var current_object = this;
 	// recursive create
+	
+	this.get_home_path = function(callback) {
+		fileSystemSingleton.load(
+			function(fileSystem){
+				callback(fileSystem.root.nativeURL);
+			});
+	};
+	
+	
+	
 	this.create_r =function(path, callback, fail, position)
 	{
 		position = (typeof position == 'undefined')? 0: position;
