@@ -438,7 +438,8 @@ var FileManager = function(){
 						writer.onwriteend = function(evt){
 							Log('FileManager','mesg')('file write success!');
 							success(evt);
-						}
+						};
+						writer.seek(writer.length);
 				        writer.write(data);
 					}, 
 					fail
